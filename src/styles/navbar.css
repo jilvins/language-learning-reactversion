@@ -1,0 +1,6 @@
+.navbar {
+    display: flex;
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}
