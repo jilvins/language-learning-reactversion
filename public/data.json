@@ -1,67 +1,57 @@
 
     [
         {
+        "id": "1",
         "english": "cat",
         "latvian": "kaķis",
-        "image": "/images/cat-2083492_1280.jpg",
-        "options": [  {"answer": "kaķis"}, 
-                    {"answer":"kalvis"},    
-                    {"answer": "vāvere"}, 
-                    {"answer": "vanags"}
-                ]
+        "image": "images/cat-2083492_1280.jpg",
+        "options": ["kaķis", "kalvis","vāvere", "vanags"]
     
             },
-    {
-        "english": "dog",
-        "latvian": "suns",
-        "image": "/images/puppy-1903313_1280.jpg",
-        "options": [  {"answer":"suns"},
-                    {"answer":"sūna"},
-                    {"answer":"purns"},
-                    {"answer":"purvs"}
-        ]
-    },
-     {
-        "english": "bread",
-        "latvian": "maize",
-        "image": "/images/bread-1510155_1280.jpg",
-        "options": [  {"answer":"maize"},
-                    {"answer":"maiss"},
-                    {"answer":"balva"},
-                    {"answer":"baļķis"}
-                ]
-    },
+            {
+                "id": "2",
+                "english": "dog",
+                "latvian": "suns",
+                "image": "/images/puppy-1903313_1280.jpg",
+                "options": ["suns","sūna","purns","purvs"]
+            },
+             {
+                "id": "3",
+                "english": "bread",
+                "latvian": "maize",
+                "image": "/images/bread-1510155_1280.jpg",
+                "options": ["maize","maiss","balva","baļķis"]
+            },
+            
+            {
+                "id": "4",
+                "english": "water",
+                "latvian": "ūdens",
+                "image": "/images/drip-921067_1280.jpg",
+                "options": ["ūdens","ūdrs","ābols","āzis"
+                        ]
+            },
+            
+             {
+                "id": "5",
+                "english": "house",
+                "latvian": "māja",
+                "image": "/images/architecture-1836070_1280.jpg",
+                "options": ["māja", "mākonis","roka","ronis"
+                        ]
+             },
+        
+             {
+                "id": "6",
+                "english": "knife",
+                "latvian": "nazis",
+                "image": "/images/knife-554062_1280.jpg",
+                "options": ["nazis","nagla","galva","galds" 
+                        ]
+             }
     
-    {
-        "english": "water",
-        "latvian": "ūdens",
-        "image": "/images/drip-921067_1280.jpg",
-        "options": [  {"answer":"ūdens"}, 
-                   {"answer":"ūdrs"}, 
-                    {"answer":"ābols"}, 
-                    {"answer":"āzis"}
-                ]
-    },
-    
-     {
-        "english": "house",
-        "latvian": "māja",
-        "image": "/images/architecture-1836070_1280.jpg",
-        "options": [  {"answer":"māja"}, 
-                    {"answer":"mākonis"},
-                    {"answer":"roka"}, 
-                    {"answer":"ronis"}
-                ]
-     },
-
-     {
-        "english": "knife",
-        "latvian": "nazis",
-        "image": "/images/knife-554062_1280.jpg",
-        "options": [  {"answer":"nazis"}, 
-                    {"answer":"nagla"},
-                    {"answer":"galva"}, 
-                    {"answer":"galds"} 
-                ]
-     }
     ]
+
+
+
+ 

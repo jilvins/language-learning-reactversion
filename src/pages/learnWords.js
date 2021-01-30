@@ -5,18 +5,22 @@ import {Context} from '../contextProvider'
 
 function LearnWords () {
     const {learningMaterial} = useContext(Context)
-
-   /* const newWords = learningMaterial.map((word) => (
-        <LearningContainer key={word.english} word={word} />
-    ))*/
+    
+   const newWords = learningMaterial.map((word) => (
+        <LearningContainer key={word.id} word={word} />
+        
+    ))
 
    return ( 
        
    <div>
      
-   {/* {newWords}*/} <div>nedarbojas</div>
+   {newWords}
+   {console.log(learningMaterial[1])}
     </div>
     )
 }
 
 export default LearnWords
+
+//learningMaterial.filter(options => options.includes('k'))
