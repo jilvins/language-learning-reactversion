@@ -18,7 +18,7 @@ function ContextProvider({children}) {
             
                 
     }, [])
-    console.log(learningMaterial)
+
 
     return (
         <Context.Provider value={{learningMaterial, setLearningMaterial}}>
