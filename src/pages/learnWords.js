@@ -7,13 +7,10 @@ import {Context} from '../contextProvider'
 function LearnWords () {
     let {learningMaterial} = useContext(Context)
 
-    const unique = [...new Set(learningMaterial)];
-
     
     let randomNumber = Math.floor(Math.random() * learningMaterial.length) ;
   
-
-
+    console.log(learningMaterial)
    
     const newWords = learningMaterial.filter(word=> word.id == randomNumber).map((word) => (
         <LearningContainer key={word.id} word={word} />))
@@ -26,7 +23,7 @@ function LearnWords () {
        
      
    {newWords}
-   {console.log(unique)}
+   
     </div>
     )
 }

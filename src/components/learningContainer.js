@@ -1,29 +1,44 @@
-import React, {useContext, useState} from 'react'
+import React, { useState} from 'react'
 import '../styles/learningcontainer.css'
-import {Context} from '../contextProvider'
+//import {Context} from '../contextProvider'
 
 function LearningContainer ({word}) {
-    const {learningMaterial} = useContext(Context)
-    const [chosen, setChosen] = useState(false)
+    //const {learningMaterial} = useContext(Context)
+    const [btnColor, setBtnColor] = useState('')
+    const [score, setScore] = useState(0)
+    const [rightAnswer, setRightAnswer] = useState(false)
     
-    //console.log(learningMaterial[0].latvian)
 
-    function sayHello(e) {
-        console.log(`${word.english}'was clicked'`);
+    function chooseAnswer(e) {
+        
+        e.target.value === word.latvian ? setBtnColor('true') : setBtnColor('false')
+        e.target.value === word.latvian ? setScore(score+1) : setScore(score+0)
+        e.target.value === word.latvian ? setRightAnswer(true) : setRightAnswer(false)
       }
+
+    function nextQuestion (word) {
+        [word].shift()
+    }
 
     return (
         
         <div>
+            <div>
+                <p>Current score: {score}</p>
+            </div>
         <div>
             <img src={word.image} alt='wordImg' className='wordImg' />
         </div>
         <div>
-            <button onClick={sayHello}>{word.options[0]}</button>
-            <button onClick={sayHello}>{word.options[1]}</button>
-            <button onClick={sayHello}>{word.options[2]}</button>
-            <button onClick={sayHello}>{word.options[3]}</button>
+            <button value={word.options[0]} onClick={chooseAnswer} className={btnColor}>{word.options[0]}</button>
+            <button value={word.options[1]} onClick={chooseAnswer} className={btnColor}>{word.options[1]}</button>
+            <button value={word.options[2]} onClick={chooseAnswer} className={btnColor}>{word.options[2]}</button>
+            <button value={word.options[3]} onClick={chooseAnswer} className={btnColor}>{word.options[3]}</button>
            
+        </div>
+        <div>
+                <p>{rightAnswer ? "You are right" : null}</p>
+                <button onClick={nextQuestion}>{rightAnswer ? "Next question" : null}</button>
         </div>
         </div>
     )
