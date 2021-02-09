@@ -1,23 +1,29 @@
-import React, { useState} from 'react'
+import React, { useState, useContext} from 'react'
 import '../styles/learningcontainer.css'
-//import {Context} from '../contextProvider'
+import {Context} from '../contextProvider'
 
 function LearningContainer ({word}) {
-    //const {learningMaterial} = useContext(Context)
+    const {learningMaterial} = useContext(Context)
+    const {currentQuestion, setCurrentQuestion} = useContext(Context)
     const [btnColor, setBtnColor] = useState('')
-    const [score, setScore] = useState(0)
+    const {score, setScore} = useContext(Context)
     const [rightAnswer, setRightAnswer] = useState(false)
+    
     
 
     function chooseAnswer(e) {
-        
+        e.preventDefault()
         e.target.value === word.latvian ? setBtnColor('true') : setBtnColor('false')
         e.target.value === word.latvian ? setScore(score+1) : setScore(score+0)
         e.target.value === word.latvian ? setRightAnswer(true) : setRightAnswer(false)
+        console.log(score)
+        console.log(currentQuestion)
       }
 
-    function nextQuestion (word) {
-        [word].shift()
+    function nextQuestion () {
+        currentQuestion <= (learningMaterial.length - 1) ?
+        setCurrentQuestion(currentQuestion + 1) : console.log(`game over, your total score is ${score}`)
+        
     }
 
     return (

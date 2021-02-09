@@ -6,9 +6,12 @@ import {Context} from '../contextProvider'
 
 function LearnWords () {
     let {learningMaterial} = useContext(Context)
+    const {currentQuestion} = useContext(Context)
+    
 
     
-    let randomNumber = Math.floor(Math.random() * learningMaterial.length) ;
+    //let randomNumber = Math.floor(Math.random() * learningMaterial.length) ;
+    let randomNumber = currentQuestion
   
     console.log(learningMaterial)
    

@@ -4,6 +4,8 @@ const Context = React.createContext()
 
 function ContextProvider({children}) {
     const [learningMaterial, setLearningMaterial] = useState([])
+    const [currentQuestion, setCurrentQuestion] = useState(1)
+    const [score, setScore] = useState(0)
 
     useEffect(() => {
         fetch('data.json' , {
@@ -21,7 +23,7 @@ function ContextProvider({children}) {
 
 
     return (
-        <Context.Provider value={{learningMaterial, setLearningMaterial}}>
+        <Context.Provider value={{learningMaterial, setLearningMaterial, currentQuestion, setCurrentQuestion, score, setScore}}>
             {children}
         </Context.Provider>
     )
