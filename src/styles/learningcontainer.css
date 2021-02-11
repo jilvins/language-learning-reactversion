@@ -9,3 +9,18 @@
 .false {
     background-color: red;
 }
+.btn-option{
+    background-color: burlywood;
+    color: brown;
+    border: none;
+    border-radius: 10px;
+    width: 6em;
+    height: 2em;
+}
+.btn-option:hover{
+    background-color: cadetblue;
+}
+
+button:empty {
+    display: none;
+}

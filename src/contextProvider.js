@@ -1,29 +1,60 @@
 import React, {useState, useEffect} from 'react'
+import axios from 'axios'
 
 const Context = React.createContext()
 
 function ContextProvider({children}) {
     const [learningMaterial, setLearningMaterial] = useState([])
+    const [gameStarted, setGameStarted] = useState(false)
     const [currentQuestion, setCurrentQuestion] = useState(1)
     const [score, setScore] = useState(0)
+    const [currentLevel, setCurrentLevel] = useState(1)
+    const [currentWordSet, setCurrentWordSet] = useState('data.json')
+    
+  
 
-    useEffect(() => {
-        fetch('data.json' , {
-            headers : { 
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-             }
-          })
-            .then(res => res.json())
-            .then(data => setLearningMaterial(data))
-            .catch((err) => {console.error(err) });
+            useEffect( () => {
+            async function fetchData() {
+                const result = await axios(currentWordSet , {
+                    headers : { 
+                      'Content-Type': 'application/json',
+                      'Accept': 'application/json'
+                     }
+                  })
+             
+                setLearningMaterial(result.data);
+            }
+            fetchData()
+              }, [currentWordSet]);
             
-                
-    }, [])
+    function startGame() {
+                setGameStarted(true)
+                setCurrentQuestion(1)
+        if (currentLevel===1){
+            setCurrentWordSet('data.json') 
+        } else if (currentLevel===2){
+            setCurrentWordSet('secondLevel.json')
+        } else if (currentLevel===3){
+            setCurrentWordSet('thirdLevel.json')
+        }
+            }           
+   
+
+    function nextLevel () {
+        
+        setGameStarted(false)
+        setCurrentLevel(currentLevel+1)
+        /**/
+        return(
+            <p>Next level will be about family</p>
+        )
+        
+    }
 
 
     return (
-        <Context.Provider value={{learningMaterial, setLearningMaterial, currentQuestion, setCurrentQuestion, score, setScore}}>
+        <Context.Provider value={{learningMaterial, setLearningMaterial, currentQuestion, setCurrentQuestion, score, setScore,
+            gameStarted, setGameStarted, nextLevel, startGame}}>
             {children}
         </Context.Provider>
     )
