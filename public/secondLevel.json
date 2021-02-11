@@ -1,0 +1,53 @@
+[
+    {
+    "id": "1",
+    "english": "man",
+    "latvian": "vīrietis",
+    "image": "/images/man-593371_640.jpg",
+    "options": ["vīrietis","virsotne", "vārds", "valnis"]
+
+        },
+{
+    "id": "2",
+    "english": "woman",
+    "latvian": "sieviete",
+    "image": "/images/woman-2150881_640.jpg",
+    "options": ["sieviete", "siena","siers","signāls"
+    ]
+},
+ {
+    "id": "3",
+    "english": "boy",
+    "latvian": "zēns",
+    "image": "/images/boy-2923682_640.jpg",
+    "options": ["zēns","zēģele","zalktis","zaglis"
+            ]
+},
+
+{
+    "id": "4",
+    "english": "girl",
+    "latvian": "meitene",
+    "image": "/images/girl-1241817_640.jpg",
+    "options": ["meitene","mētelis","melone","meli"
+            ]
+},
+
+ {
+    "id": "5",
+    "english": "family",
+    "latvian": "ģimene",
+    "image": "/images/family-457235_640.jpg",
+    "options": ["ģimene","ģipsis","ģindenis","ģints"
+            ]
+ },
+
+ {
+    "id": "6",
+    "english": "human",
+    "latvian": "cilvēks",
+    "image": "/images/human-1031060_640.jpg",
+    "options": ["cimds","cilvēks","caune","ciedrs" 
+            ]
+ }
+]

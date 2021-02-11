@@ -1,0 +1,54 @@
+[
+    {
+    "id": "1",
+    "english": "to run",
+    "latvian": "skriet",
+    "image": "/images/running-731506_640.jpg",
+    "options": [ "slēpot", "sēdēt", "skriet", "skaldīt"
+            ]
+
+        },
+{
+    "id": "2",
+    "english": "to walk",
+    "latvian": "iet",
+    "image": "/images/walking-2770301_640.jpg",
+    "options": ["iet","ielikt","izvest","izdot"
+    ]
+},
+ {
+    "id": "3",
+    "english": "to eat",
+    "latvian": "ēst",
+    "image": "/images/eating-413685_640.jpg",
+    "options": ["elsot","ēst","elpot","errot"
+            ]
+},
+
+{
+    "id": "4",
+    "english": "to drink",
+    "latvian": "dzert",
+    "image": "/images/drinking-601568_640.jpg",
+    "options": ["dzīties","dziedāt","dzēst","dzert"
+            ]
+},
+
+ {
+    "id": "5",
+    "english": "to sleep",
+    "latvian": "gulēt",
+    "image": "/images/sleeping-1151351_640.jpg",
+    "options": ["graut","gūt","gulēt","griezties"
+            ]
+ },
+
+ {
+    "id": "6",
+    "english": "to work",
+    "latvian": "strādāt",
+    "image": "/images/working-67640_640.jpg",
+    "options": ["strādāt","staigāt","stostīties","steigties" 
+            ]
+ }
+]
