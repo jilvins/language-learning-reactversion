@@ -44,17 +44,13 @@ function ContextProvider({children}) {
         
         setGameStarted(false)
         setCurrentLevel(currentLevel+1)
-        /**/
-        return(
-            <p>Next level will be about family</p>
-        )
-        
+     
     }
 
 
     return (
         <Context.Provider value={{learningMaterial, setLearningMaterial, currentQuestion, setCurrentQuestion, score, setScore,
-            gameStarted, setGameStarted, nextLevel, startGame}}>
+            gameStarted, setGameStarted, currentLevel, nextLevel, startGame}}>
             {children}
         </Context.Provider>
     )

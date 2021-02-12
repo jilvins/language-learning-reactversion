@@ -1,5 +1,7 @@
 .wordImg{
     height: 200px;
+    margin: 2em;
+    border-radius: 5px;
 }
 
 .true {
@@ -20,7 +22,21 @@
 .btn-option:hover{
     background-color: cadetblue;
 }
+.btn-option:active{
+    background-color: crimson;
+    color: whitesmoke;
+}
 
 button:empty {
     display: none;
+}
+
+
+.app-body{
+    background-color: cornflowerblue;
+    padding: 2em;
+}
+
+.game-body {
+    background-color: thistle;
 }

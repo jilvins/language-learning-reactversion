@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import LearningContainer from '../components/learningContainer'
 import {Context} from '../contextProvider'
+import '../styles/learningcontainer.css'
 
 
 
@@ -12,8 +13,6 @@ function LearnWords () {
     
     //let randomNumber = Math.floor(Math.random() * learningMaterial.length) ;
     let randomNumber = currentQuestion
-  
-    console.log(learningMaterial)
    
     const newWords = learningMaterial.filter(word=> word.id == randomNumber).map((word) => (
         <LearningContainer key={word.id} word={word} />))
@@ -22,7 +21,7 @@ function LearnWords () {
 
    return ( 
        
-   <div>
+   <div className="app-body">
        
      
    {newWords}
