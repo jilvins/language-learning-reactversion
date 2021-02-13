@@ -25,9 +25,7 @@ function LearningContainer ({word}) {
     function nextQuestion () {
         currentQuestion <= (learningMaterial.length - 1) ?
         setCurrentQuestion(currentQuestion + 1) : setGameStarted(false)
-        setAnswMeassage("")
-        
-        
+        setAnswMeassage("")   
     }
 
     return (
@@ -48,18 +46,21 @@ function LearningContainer ({word}) {
            
         </div>
         <div className="question-shifter">
-                <p>{answMessage}</p>
-                <button onClick={nextQuestion}>{rightAnswer && currentQuestion < 6 ? "Next question" : null}</button>
-                <button onClick={nextLevel}>{rightAnswer && currentQuestion === 6 ? "Next level" : null}</button>
+                <p className="answer-reaction">{answMessage}</p>
+                <button className="nextBtn" onClick={nextQuestion}>{rightAnswer && currentQuestion < 6 ? "Next question" : null}</button>
+                <button className="nextBtn" onClick={nextLevel}>{rightAnswer && currentQuestion === 6 ? "Next level" : null}</button>
         </div>
         </div>
         : <div className="info-screen">
-           { currentLevel===1 ? <p>Start your game? First Level with basic Latvian words will be presended</p> : null}
-           { currentLevel===2 ? <p>Congratulation you finnished the first level. Next level will be about family</p> : null}
-           { currentLevel===3 ? <p>You are getting better. Next level will be about actions uou can take</p> : null}
-           { currentLevel===4 ? <h2>You have finnished this game!!!</h2> : null}
-            <p>Your current score is: {score}</p>
-            <button onClick={startGame}>Start game</button>
+           { currentLevel===1 ? <><p>Do you want to learn a new language?</p> 
+                                <p>Feel free to press the Button</p></> : null}
+           { currentLevel===2 ? <><p>Congratulation you finnished the first level!</p> 
+                                <p>Next level will be about family</p></> : null}
+           { currentLevel===3 ? <><p>You are getting better!</p> 
+                                <p>Next level will be about actions you can take</p></> : null}
+           { currentLevel===4 ? <h2>You have finished this game!!!</h2> : null}
+           {currentLevel===1 ? null : <p>Your total score is: {score}</p>} 
+           { currentLevel===4 ? null : <button onClick={startGame}>{currentLevel===1?<p>Start game</p>:<p>Next level</p> }</button> } 
         </div>}
         </div>
     )
