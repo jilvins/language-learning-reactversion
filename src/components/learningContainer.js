@@ -33,7 +33,7 @@ function LearningContainer ({word}) {
         <div className="game-body">
           {  gameStarted ?
         <div className="game-screen">
-           
+           <h2>Pick the right word describing this image</h2>
         <div className="question-img">
             <img src={word.image} alt='wordImg' className='wordImg' />
         </div>
@@ -59,7 +59,7 @@ function LearningContainer ({word}) {
            { currentLevel===3 ? <><p>You are getting better!</p> 
                                 <p>Next level will be about actions you can take</p></> : null}
            { currentLevel===4 ? <h2>You have finished this game!!!</h2> : null}
-           {currentLevel===1 ? null : <p>Your total score is: {score}</p>} 
+           {currentLevel===1 ? null : <p>Your total score is: {score} </p> } 
            { currentLevel===4 ? null : <button onClick={startGame}>{currentLevel===1?<p>Start game</p>:<p>Next level</p> }</button> } 
         </div>}
         </div>

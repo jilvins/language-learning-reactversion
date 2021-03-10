@@ -3,6 +3,9 @@ body{
   margin: 0;
   
 }
+p, h2  {
+  font-family:"Goldman";
+}
 .App {
   text-align: center;
   

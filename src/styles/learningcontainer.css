@@ -1,21 +1,18 @@
-
-
-button:empty {
-    display: none;
-}
-
-
 .app-body{
     padding: 2em;
     background-image: url("./img/bridge-5356471_1920.jpg");
-  background-size: cover;
-  height: 95vh;
+    background-size: cover;
+    height: 95vh;
     
 }
 
 .info-screen {
-    color: whitesmoke;
-    font-size: 4em;
+    color: #021a40;
+    font-size: 3em;
+    background-color: #f4f1de;
+    opacity: 0.8;
+    padding: 0.5em;
+    border-radius: 15px;
 }
 .info-screen button {
     background-color:#44c767;
@@ -36,16 +33,19 @@ button:empty {
 .game-screen{
     background-color: #f4f1de;
     opacity: 0.8;
-    height: 60vh;
+    height: 70vh;
     width: 60vw;
+    padding: 0.5em;
     border-radius: 10px;
     margin: 0 auto;
 }
 
 .wordImg{
-    height: 200px;
+    height: 12em;
     margin: 2em;
-    border-radius: 5px;
+    border-radius: 5px; 
+    border:2px solid #021a40;
+   
 }
 
 .btn-option{
@@ -75,11 +75,15 @@ button:empty {
 .nextBtn:active{
     background-color: crimson;
 }
+button:empty {
+    display: none;
+}
+
 .answer-reaction{
     color:#b7094c;
     font-size: 1em;
     font-weight: bolder;
-    animation: animate 1s; 
+    animation: animate 2s; 
 }
 @keyframes animate { 
     0% { 
@@ -100,3 +104,15 @@ button:empty {
     }
 
 }
+
+@media only screen and (max-width: 600px) {
+    .wordImg {
+      width: 14em;
+    }
+    .info-screen{
+        font-size: 2em;
+    }
+    .game-screen{
+        height: 80vh;
+    }
+  }

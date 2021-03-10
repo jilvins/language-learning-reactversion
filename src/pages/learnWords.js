@@ -10,8 +10,6 @@ function LearnWords () {
     const {currentQuestion} = useContext(Context)
     
 
-    
-    //let randomNumber = Math.floor(Math.random() * learningMaterial.length) ;
     let randomNumber = currentQuestion
    
     const newWords = learningMaterial.filter(word=> word.id == randomNumber).map((word) => (
